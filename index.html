@@ -1,346 +1,435 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> AMORI CAFE</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-     background-image: url('loogo.png'); 
-     background-size: cover; 
-     background-position: center; 
-     background-repeat: no-repeat; 
-        background-attachment: fixed;  
-        
-      color: #f5f0e1;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .menu-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-    .menu-nav button {
-      background-color: #d9c593;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 8px;
-      color: #0a3b34;
-    }
-    .menu-section {
-      display: none;
-      max-width: 700px;
-      margin: auto;
-      /* background-color: #0a3b34; */
-    }
-    .menu-section.active {
-      display: block;
-    }
-    h2 {
-      font-size: 26px;
-      color: #f5f0e1;
-      border-bottom: 1px solid #aaa;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 12px;
-      font-size: 18px;
-      color: #ecca73;
-        
-    }
-    .price {
-      color: ecca73;
-    }
 
-  </style>
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AMORI CAFE</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Cairo',sans-serif;
+background-image:url('loogo.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#f5f0e1;
+padding:20px;
+}
+
+h1{
+text-align:center;
+margin-bottom:30px;
+}
+
+.menu-nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin-bottom:30px;
+}
+
+.menu-nav button{
+background:#d9c593;
+border:none;
+padding:10px 18px;
+font-size:15px;
+cursor:pointer;
+border-radius:8px;
+color:#0a3b34;
+}
+
+.menu-section{
+display:none;
+max-width:850px;
+margin:auto;
+background:rgba(0,0,0,0.55);
+padding:20px;
+border-radius:15px;
+}
+
+.menu-section.active{
+display:block;
+}
+
+h2{
+font-size:26px;
+border-bottom:1px solid #aaa;
+padding-bottom:10px;
+margin-bottom:20px;
+text-align:center;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+li{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+font-size:18px;
+color:#ecca73;
+}
+
+.price{
+color:#ecca73;
+}
+
+small{
+display:block;
+font-size:13px;
+color:#ddd;
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <h1>Menu</h1>
+<h1>AMORI CAFE MENU</h1>
 
-  <div class="menu-nav">
-    <button onclick="showSection('coffee')"> القهوة</button>
-    <button onclick="showSection('chocolate')"> شوكليت</button>
-    <button onclick="showSection('hot')"> مشروبات ساخنة</button>
-    <button onclick="showSection('juices')"> عصائر طبيعية</button>
-    <button onclick="showSection('cocktail')"> كوكتيل</button>
-    <button onclick="showSection('cold')"> مشروبات باردة</button>
-    <button onclick="showSection('healthy')"> هيلثي درينك</button>
-    <button onclick="showSection('redbull')"> ريد بول</button>
-    <button onclick="showSection('shisha')"> شيشة</button>
-    <button onclick="showSection('desserts')"> حلويات</button>
-  </div>
+<div class="menu-nav">
 
-  <div id="coffee" class="menu-section active">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">قهوة</span>
-  <span style="direction: ltr;">Coffee</span>
-</h2>
-    <ul>
-     <li><span>قهوة تركي<br><small>Turkish Coffee</small></span><span class="price">40 L.E</span></li>
-<li><span>قهوة تركي دابل<br><small>Turkish Coffee Double</small></span><span class="price">44 L.E</span></li>
-<li><span>قهوة فرنساوي<br><small>French Coffee</small></span><span class="price">50 L.E</span></li>
-<li><span>قهوة بندق قطع<br><small>Coffee with Hazelnut</small></span><span class="price">50 L.E</span></li>
-<li><span>اسبريسو سنجل<br><small>Espresso Single</small></span><span class="price">44 L.E</span></li>
-<li><span>اسبريسو دابل<br><small>Espresso Double</small></span><span class="price">55 L.E</span></li>
-<li><span>اسبريسو ميكاتو<br><small>Espresso Macchiato</small></span><span class="price">50 L.E</span></li>
-<li><span>اسبريسو AMORI (كريمة مخفوقة)<br><small>Espresso AMORI (Whipped Cream)</small></span><span class="price">55 L.E</span></li>
-<li><span>اسبريسو شوكليت<br><small>Espresso Chocolate</small></span><span class="price">62 L.E</span></li>
-<li><span>نسكافيه بلاك<br><small>Nescafe Black</small></span><span class="price">40 L.E</span></li>
-<li><span>نسكافيه بلبن<br><small>Nescafe with Milk</small></span><span class="price">50 L.E</span></li>
-<li><span>لاتيه<br><small>Latte</small></span><span class="price">50 L.E</span></li>
-<li><span>سبانش لاتيه<br><small>Spanish Latte</small></span><span class="price">62 L.E</span></li>
-<li><span>كابتشينو<br><small>Cappuccino</small></span><span class="price">55 L.E</span></li>
-<li><span>كورتادو<br><small>Cortado</small></span><span class="price">55 L.E</span></li>
-<li><span>فلات وايت<br><small>Flat White</small></span><span class="price">55 L.E</span></li>
-<li><span>موكا<br><small>Mocha</small></span><span class="price">55 L.E</span></li>
-<li><span>أمريكان كوفي<br><small>American Coffee</small></span><span class="price">68 L.E</span></li>
-<li><span>AMORI جولدن<br><small>AMORI Golden</small></span><span class="price">222 L.E</span></li>
+<button onclick="showSection('coffee')">القهوة</button>
+<button onclick="showSection('hot')">مشروبات ساخنة</button>
+<button onclick="showSection('juices')">عصاير فريش</button>
+<button onclick="showSection('cold')">مشروبات باردة</button>
+<button onclick="showSection('mojito')">موهيتو</button>
+<button onclick="showSection('cocktail')">كوكتيل</button>
+<button onclick="showSection('fruit')">فروت سالاد</button>
+<button onclick="showSection('milkshake')">ميلك شيك</button>
+<button onclick="showSection('smoothie')">سموزي</button>
+<button onclick="showSection('iced')">آيس كوفي</button>
+<button onclick="showSection('desserts')">ديزرت</button>
+<button onclick="showSection('shisha')">شيشة</button>
 
-    </ul>
-  </div>
+</div>
+<div id="coffee" class="menu-section active">
 
-  <div id="chocolate" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">كوكتيل شوكليت قهوة</span>
-  <span style="direction: ltr;">chocolate coffee cocktail</span>
-</h2>
-    <ul>
-        <li><span>أيس شوكليت<br><small>Ice Chocolate</small></span><span class="price">77 L.E</span></li>
-<li><span>أيس سبانيش لاتيه<br><small>Iced Spanish Latte</small></span><span class="price">84 L.E</span></li>
-<li><span>أيس موكا<br><small>Iced Mocha</small></span><span class="price">100 L.E</span></li>
-<li><span>مينت شوكليت<br><small>Mint Chocolate</small></span><span class="price">90 L.E</span></li>
-<li><span>هابي مانكي<br><small>Happy Monkey</small></span><span class="price">95 L.E</span></li>
-<li><span>أموري<br><small>AMORI</small></span><span class="price">100 L.E</span></li>
-<li><span>فرابتشينو<br><small>Frappuccino</small></span><span class="price">90 L.E</span></li>
-<li><span>باور كافيه<br><small>Powe Cafe</small></span><span class="price">110 L.E</span></li>
-<li><span>دافيدوف<br><small>Davidoff</small></span><span class="price">110 L.E</span></li>
-<li><span>سنيكرز<br><small>Snickers</small></span><span class="price">110 L.E</span></li>
-<li><span>كيت كات<br><small>Kit Kat</small></span><span class="price">110 L.E</span></li>
-<li><span>أوريو تشيك<br><small>Oreo Shake</small></span><span class="price">110 L.E</span></li>
-<li><span>هوهوز كوكتيل<br><small>Hohos Cocktail</small></span><span class="price">110 L.E</span></li>
+<h2>قهوة | Coffee</h2>
 
-    </ul>
-  </div>
+<ul>
 
-  <div id="hot" class="menu-section">
-    <h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">مشروبات ساخنة</span>
-  <span style="direction: ltr;">Hot Drinks</span>
-</h2>
-    <ul>
-        <li><span>شاي<br><small>Tea</small></span><span class="price">28 L.E</span></li>
-<li><span>نعناع (باكيت)<br><small>Mint (Bag)</small></span><span class="price">33 L.E</span></li>
-<li><span>كركديه (باكيت)<br><small>Hibiscus (Bag)</small></span><span class="price">33 L.E</span></li>
-<li><span>ينسون (باكيت)<br><small>Anise (Bag)</small></span><span class="price">33 L.E</span></li>
-<li><span>قرفة (باكيت)<br><small>Cinnamon (Bag)</small></span><span class="price">33 L.E</span></li>
-<li><span>قرفة<br><small>Cinnamon</small></span><span class="price">40 L.E</span></li>
-<li><span>قرفة بلبن<br><small>Cinnamon with Milk</small></span><span class="price">50 L.E</span></li>
-<li><span>شاي أخضر<br><small>Green Tea</small></span><span class="price">40 L.E</span></li>
-<li><span>شاي بالنكهات<br><small>Flavored Tea</small></span><span class="price">40 L.E</span></li>
-<li><span>شاي بلبن<br><small>Milk Tea</small></span><span class="price">44 L.E</span></li>
-<li><span>شاي براد<br><small>Brad Tea</small></span><span class="price">44 L.E</span></li>
-<li><span>هوت سيدر<br><small>Hot Cider</small></span><span class="price">44 L.E</span></li>
-<li><span>سحلب<br><small>Orchid</small></span><span class="price">55 L.E</span></li>
-<li><span>سحلب ميلفاي<br><small>Melfi Orchid</small></span><span class="price">62 L.E</span></li>
-<li><span>هوت شوكليت<br><small>Hot Chocolate</small></span><span class="price">50 L.E</span></li>
-<li><span>هوت همر هيد<br><small>Hot Hammer Head</small></span><span class="price">50 L.E</span></li>
-<li><span>هوت بوريو<br><small>Hot Borio</small></span><span class="price">66 L.E</span></li>
-<li><span>هوت كيت كات<br><small>Hot Kit Kat</small></span><span class="price">73 L.E</span></li>
-<li><span>وايت هوت شوكليت<br><small>White Hot Chocolate</small></span><span class="price">55 L.E</span></li>
+<li><span>قهوة تركي سنجل<small>Turkish Coffee Single</small></span><span class="price">45</span></li>
+<li><span>قهوة تركي دبل<small>Turkish Coffee Double</small></span><span class="price">52</span></li>
+<li><span>قهوة فرنساوي سنجل<small>French Coffee Single</small></span><span class="price">50</span></li>
+<li><span>قهوة فرنساوي دبل<small>French Coffee Double</small></span><span class="price">59</span></li>
+<li><span>قهوة بندق سنجل<small>Hazelnut Coffee Single</small></span><span class="price">55</span></li>
+<li><span>قهوة بندق دبل<small>Hazelnut Coffee Double</small></span><span class="price">65</span></li>
+<li><span>اسبرسو سنجل<small>Espresso Single</small></span><span class="price">49</span></li>
+<li><span>اسبرسو دبل<small>Espresso Double</small></span><span class="price">59</span></li>
+<li><span>ميكاتو سنجل<small>Macchiato Single</small></span><span class="price">54</span></li>
+<li><span>ميكاتو دبل<small>Macchiato Double</small></span><span class="price">65</span></li>
+<li><span>فلات وايت<small>Flat White</small></span><span class="price">69</span></li>
+<li><span>كورتادو<small>Cortado</small></span><span class="price">65</span></li>
+<li><span>كابتشينو<small>Cappuccino</small></span><span class="price">65</span></li>
+<li><span>لاتيه<small>Latte</small></span><span class="price">60</span></li>
+<li><span>نسكافيه بلاك<small>Nescafe Black</small></span><span class="price">50</span></li>
+<li><span>نسكافيه باللبن<small>Nescafe With Milk</small></span><span class="price">58</span></li>
+<li><span>أميريكان كوفي بلاك<small>Americano Black</small></span><span class="price">65</span></li>
+<li><span>أميريكان كوفي باللبن<small>Americano With Milk</small></span><span class="price">75</span></li>
+<li><span>موكا<small>Mocha</small></span><span class="price">68</span></li>
+<li><span>وايت موكا<small>White Mocha</small></span><span class="price">68</span></li>
+<li><span>كوفي لوتس<small>Lotus Coffee</small></span><span class="price">70</span></li>
+<li><span>بستاشيو كوفي<small>Pistachio Coffee</small></span><span class="price">75</span></li>
+<li><span>ماتشا<small>Matcha</small></span><span class="price">55</span></li>
+<li><span>بلو لاتيه<small>Blue Latte</small></span><span class="price">65</span></li>
 
-    </ul>
-  </div>
+</ul>
 
-  <div id="juices" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">عصائر طبيعية</span>
-  <span style="direction: ltr;">Fresh Drinks</span>
-</h2>
-    <ul>
-        <li><span>ليمون<br><small>Lemon</small></span><span class="price">56 L.E</span></li>
-<li><span>ليمون بالنعناع<br><small>Mint Lemon</small></span><span class="price">67 L.E</span></li>
-<li><span>جوافة<br><small>Guava</small></span><span class="price">72 L.E</span></li>
-<li><span>فراولة<br><small>Strawberry</small></span><span class="price">72 L.E</span></li>
-<li><span>مانجو<br><small>Mango</small></span><span class="price">79 L.E</span></li>
-<li><span>برتقال<br><small>Orange</small></span><span class="price">79 L.E</span></li>
-<li><span>موز باللبن<br><small>Banana milk</small></span><span class="price">79 L.E</span></li>
-<li><span>بطيخ (فاكهة موسمية)<br><small>Watermelon (seasonal)</small></span><span class="price">84 L.E</span></li>
-<li><span>كانتالوب (فاكهة موسمية)<br><small>Cantaloupe (seasonal)</small></span><span class="price">84 L.E</span></li>
-<li><span>كيوي (فاكهة موسمية)<br><small>Kiwi (seasonal)</small></span><span class="price">95 L.E</span></li>
+</div>
+<div id="hot" class="menu-section">
 
-    </ul>
-  </div>
+<h2>مشروبات ساخنة | Hot Drinks</h2>
 
-  <div id="cocktail" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">كوكتيل</span>
-  <span style="direction: ltr;">cocktail</span>
-</h2>
-    <ul>
-        <li><span>سموزي فروت<br><small>Fruit smoothie</small></span><span class="price">77 L.E</span></li>
-<li><span>صن شاين<br><small>Sunshine</small></span><span class="price">84 L.E</span></li>
-<li><span>ميلك شيك<br><small>Milkshake</small></span><span class="price">88 L.E</span></li>
-<li><span>ريفرش<br><small>Refresh</small></span><span class="price">89 L.E</span></li>
-<li><span>فلوريدا<br><small>Florida</small></span><span class="price">89 L.E</span></li>
-<li><span>موهيتو<br><small>Mojito</small></span><span class="price">95 L.E</span></li>
-<li><span>موهيتو AMORI<br><small>Amori’s mojito</small></span><span class="price">95 L.E</span></li>
-<li><span>بيناكولادا<br><small>Pinacolada</small></span><span class="price">99 L.E</span></li>
-<li><span>AMORI<br><small>AMORI</small></span><span class="price">100 L.E</span></li>
-<li><span>كوباكابانا<br><small>Copacabana</small></span><span class="price">110 L.E</span></li>
-<li><span>باور كوكتيل<br><small>Power Cocktail</small></span><span class="price">110 L.E</span></li>
-<li><span>هابي<br><small>Happy</small></span><span class="price">135 L.E</span></li>
+<ul>
 
-    </ul>
-  </div>
+<li><span>شاي أحمر<small>Black Tea</small></span><span class="price">35</span></li>
+<li><span>شاي أخضر<small>Green Tea</small></span><span class="price">35</span></li>
+<li><span>شاي فواكه<small>Fruit Tea</small></span><span class="price">39</span></li>
+<li><span>ينسون<small>Anise</small></span><span class="price">35</span></li>
+<li><span>كركديه<small>Hibiscus</small></span><span class="price">35</span></li>
+<li><span>نعناع<small>Mint</small></span><span class="price">35</span></li>
+<li><span>قرفة<small>Cinnamon</small></span><span class="price">35</span></li>
+<li><span>جنزبيل<small>Ginger</small></span><span class="price">40</span></li>
+<li><span>قرفة باللبن<small>Cinnamon With Milk</small></span><span class="price">50</span></li>
+<li><span>جنزبيل باللبن<small>Ginger With Milk</small></span><span class="price">50</span></li>
+<li><span>مشروب أعشاب<small>Herbal Mix</small></span><span class="price">65</span></li>
+<li><span>هوت سيدر<small>Hot Cider</small></span><span class="price">59</span></li>
+<li><span>هوت شوكلت<small>Hot Chocolate</small></span><span class="price">65</span></li>
+<li><span>هوت وايت شوكلت<small>Hot White Chocolate</small></span><span class="price">65</span></li>
+<li><span>هوت سنيكرز<small>Hot Snickers</small></span><span class="price">95</span></li>
+<li><span>هوت كيت كات<small>Hot KitKat</small></span><span class="price">95</span></li>
+<li><span>هوت اوريو<small>Hot Oreo</small></span><span class="price">85</span></li>
+<li><span>شاي براد (2 فرد)<small>Tea Pot (2 Persons)</small></span><span class="price">45</span></li>
+<li><span>شاي براد (3-4 فرد)<small>Tea Pot (3-4 Persons)</small></span><span class="price">49</span></li>
+<li><span>شاي باللبن<small>Milk Tea</small></span><span class="price">45</span></li>
+<li><span>سحلب سادة<small>Sahlab Plain</small></span><span class="price">55</span></li>
+<li><span>سحلب مكسرات<small>Sahlab Nuts</small></span><span class="price">65</span></li>
+<li><span>سحلب فواكه<small>Sahlab Fruits</small></span><span class="price">70</span></li>
+<li><span>سحلب لوتس<small>Lotus Sahlab</small></span><span class="price">70</span></li>
+<li><span>سحلب بستاشيو<small>Pistachio Sahlab</small></span><span class="price">75</span></li>
+<li><span>حمص الشام<small>Chickpeas Soup</small></span><span class="price">65</span></li>
 
-  <div id="cold" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">مشروبات باردة</span>
-  <span style="direction: ltr;">Soft Drinks</span>
-</h2>
-    <ul>
-        <li><span>مياه صغيرة<br><small>Small Water</small></span><span class="price">16 L.E</span></li>
-<li><span>مياه كبيرة<br><small>Large Water</small></span><span class="price">33 L.E</span></li>
-<li><span>بيبسي<br><small>Pepsi</small></span><span class="price">44 L.E</span></li>
-<li><span>سفن<br><small>Seven Up</small></span><span class="price">44 L.E</span></li>
-<li><span>ميرندا برتقال<br><small>Mirinda Orange</small></span><span class="price">44 L.E</span></li>
-<li><span>سبيرو سباتيس تفاح<br><small>Spiro Spathis</small></span><span class="price">44 L.E</span></li>
-<li><span>فيروز<br><small>Fayrouz</small></span><span class="price">50 L.E</span></li>
-<li><span>صودا<br><small>Soda</small></span><span class="price">50 L.E</span></li>
-<li><span>بريل<br><small>Birell</small></span><span class="price">50 L.E</span></li>
+</ul>
 
-    </ul>
-  </div>
+</div>
+<div id="juices" class="menu-section">
 
-  <div id="healthy" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">هيلثي درينك</span>
-  <span style="direction: ltr;">Healthy Drinks</span>
-</h2>
-    <ul>
-        <li><span>شوفان (بلح - زبدة فول سوداني - عسل)<br><small>Oats</small></span><span class="price">89 L.E</span></li>
-<li><span>شوفان (بلح - لبن - سبرسو)<br><small>Oats</small></span><span class="price">95 L.E</span></li>
-<li><span>شوفان (زبادي - مكسرات - عسل)<br><small>Oats</small></span><span class="price">106 L.E</span></li>
-<li><span>شوفان (أفوكادو - مكسرات - عسل)<br><small>Oats</small></span><span class="price">106 L.E</span></li>
-<li><span>شوفان AMORI (شيا - فواكه سلطة - عسل)<br><small>Amori’s oats</small></span><span class="price">95 L.E</span></li>
-    </ul>
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">اكسترا</span>
-  <span style="direction: ltr;">EXTRA</span>
-</h2>
-    <ul>
-        <li><span>صوص (كراميل - شوكولاتة - وايت شوكولاتة - بستاشيو)<br><small>Sauce</small></span><span class="price">17 L.E</span></li>
-<li><span>لبن<br><small>Milk</small></span><span class="price">17 L.E</span></li>
-<li><span>فلافر<br><small>Flavor</small></span><span class="price">17 L.E</span></li>
-<li><span>آيس كريم<br><small>Ice cream</small></span><span class="price">17 L.E</span></li>
-<li><span>مكسرات<br><small>Nuts</small></span><span class="price">22 L.E</span></li>
+<h2>عصاير فريش | Fresh Juice</h2>
 
-    </ul>
-  </div>
+<ul>
 
-  <div id="redbull" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">ريدبول</span>
-  <span style="direction: ltr;">Red Bull</span>
-</h2>
-    <ul>
-        <li><span>ريد بول<br><small>Red Bull</small></span><span class="price">77 L.E</span></li>
-<li><span>ريد بول فروت<br><small>Red Bull Fruit</small></span><span class="price">89 L.E</span></li>
-<li><span>ريدبول بلو بيري<br><small>Red Bull Blueberry</small></span><span class="price">89 L.E</span></li>
-<li><span>ريد بول موهيتو AMORI<br><small>Red Bull Amori’s Mojito</small></span><span class="price">95 L.E</span></li>
-<li><span>ريدبول بلو كوراساو<br><small>Red Bull Blue Curacao</small></span><span class="price">95 L.E</span></li>
-<li><span>ريدبول كوفي (سبريسو)<br><small>Red Bull Coffee (Espresso)</small></span><span class="price">106 L.E</span></li>
+<li><span>عصير مانجا<small>Mango Juice</small></span><span class="price">85</span></li>
+<li><span>عصير فراولة<small>Strawberry Juice</small></span><span class="price">80</span></li>
+<li><span>عصير جوافة<small>Guava Juice</small></span><span class="price">75</span></li>
+<li><span>عصير برتقال<small>Orange Juice</small></span><span class="price">85</span></li>
+<li><span>عصير موز باللبن<small>Banana Milk Juice</small></span><span class="price">85</span></li>
+<li><span>عصير بطيخ<small>Watermelon Juice</small></span><span class="price">85</span></li>
+<li><span>عصير كنتلوب<small>Cantaloupe Juice</small></span><span class="price">85</span></li>
+<li><span>عصير كيوي<small>Kiwi Juice</small></span><span class="price">95</span></li>
+<li><span>عصير عناب<small>Jujube Juice</small></span><span class="price">59</span></li>
+<li><span>عصير ليمون<small>Lemon Juice</small></span><span class="price">59</span></li>
+<li><span>عصير ليمون نعناع<small>Lemon Mint Juice</small></span><span class="price">69</span></li>
+<li><span>عصير خوخ<small>Peach Juice</small></span><span class="price">80</span></li>
+<li><span>عصير تفاح<small>Apple Juice</small></span><span class="price">84</span></li>
+<li><span>عصير اناناس<small>Pineapple Juice</small></span><span class="price">84</span></li>
+<li><span>عصير بطيخ نعناع<small>Watermelon Mint</small></span><span class="price">90</span></li>
+<li><span>عصير جوافة نعناع<small>Guava Mint</small></span><span class="price">85</span></li>
 
-    </ul>
-  </div>
+</ul>
 
-  <div id="shisha" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">شيشة</span>
-  <span style="direction: ltr;">Shesha</span>
-</h2>
-    <ul>
-        <li><span>شيشة قص<br><small>Shesha Uss</small></span><span class="price">28 L.E</span></li>
-<li><span>شيشة سلوم<br><small>Shesha Salom</small></span><span class="price">28 L.E</span></li>
-<li><span>شيشة فواكه فاخر<br><small>Shesha Fwakh Fakher</small></span><span class="price">106 L.E</span></li>
-<li><span>لاي طبي<br><small>Lay Teby</small></span><span class="price">17 L.E</span></li>
+</div>
+<div id="cold" class="menu-section">
 
-    </ul>
-  </div>
+<h2>مشروبات باردة | Soft Drinks</h2>
 
-  <div id="desserts" class="menu-section">
-<h2 style="display: flex; justify-content: space-between; align-items: center;">
-  <span style="direction: rtl;">حلويات</span>
-  <span style="direction: ltr;">dessert</span>
-</h2>
-    <ul>
-        <li><span>آيس كريم<br><small>Ice Cream</small></span><span class="price">35 L.E</span></li>
-<li><span>جيلي سادة<br><small>Jelly</small></span><span class="price">35 L.E</span></li>
-<li><span>جيلي هوموز<br><small>Jelly HoHos</small></span><span class="price">49 L.E</span></li>
-<li><span>بنانا سبليت<br><small>Banana Split</small></span><span class="price">79 L.E</span></li>
-<li><span>فروت سلاط<br><small>Fruit Salad</small></span><span class="price">73 L.E</span></li>
-<li><span>فروت سلاط آيس كريم<br><small>Fruit Salad with Ice Cream</small></span><span class="price">95 L.E</span></li>
-<li><span>بان كيك<br><small>Pancake</small></span><span class="price">77 L.E</span></li>
-<li><span>طاجن بان كيك<br><small>Pancake Casserole</small></span><span class="price">100 L.E</span></li>
-<li><span>طاجن نوتيلا أموري<br><small>Amori's Nutella Casserole</small></span><span class="price">106 L.E</span></li>
-<li><span>وافل<br><small>Waffle</small></span><span class="price">100 L.E</span></li>
-<li><span>وافل AMORI<br><small>Amori’s Waffle (Mix...)</small></span><span class="price">123 L.E</span></li>
+<ul>
 
-<li><span>أم علي<br><small>Umm Ali</small></span><span class="price">70 L.E</span></li>
-<li><span>كريب شوكليت<br><small>Chocolate Crepe</small></span><span class="price">70 L.E</span></li>
-<li><span>كرواسون سادة<br><small>Croissant</small></span><span class="price">61 L.E</span></li>
-<li><span>كرواسون (كريمة - شوكليت - فستق - آيس كريم)<br><small>Croissant (Cream - Chocolate - Pistachio - Ice Cream)</small></span><span class="price">67 L.E</span></li>
-<li><span>ريد فيلفيت كيك<br><small>Red Velvet Cake</small></span><span class="price">84 L.E</span></li>
-<li><span>تشيز كيك<br><small>Cheese Cake</small></span><span class="price">84 L.E</span></li>
-<li><span>شوكليت كيك<br><small>Chocolate Cake</small></span><span class="price">84 L.E</span></li>
-<li><span>مولتن كيك<br><small>Molten Cake</small></span><span class="price">89 L.E</span></li>
-<li><span>براونيز<br><small>Brownies</small></span><span class="price">50 L.E</span></li>
-<li><span>إكلير<br><small>Eclair</small></span><span class="price">95 L.E</span></li>
-<li><span>تيراميسو<br><small>Tiramisu</small></span><span class="price">100 L.E</span></li>
+<li><span>مياه معدنية صغيرة<small>Small Mineral Water</small></span><span class="price">17</span></li>
+<li><span>بيبسي<small>Pepsi</small></span><span class="price">49</span></li>
+<li><span>سفن اب<small>7Up</small></span><span class="price">49</span></li>
+<li><span>فيروز<small>Fayrouz</small></span><span class="price">50</span></li>
+<li><span>بريل<small>Birell</small></span><span class="price">50</span></li>
+<li><span>كوكاكولا<small>Coca Cola</small></span><span class="price">49</span></li>
+<li><span>ميرندا<small>Mirinda</small></span><span class="price">49</span></li>
+<li><span>ريد بول<small>Red Bull Energy</small></span><span class="price">85</span></li>
+<li><span>ريد بول فلفر<small>Red Bull Flavor</small></span><span class="price">90</span></li>
 
-    </ul>
-  </div>
+</ul>
 
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.menu-section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
-  <p style="text-align:center; margin-top:40px; font-size:16px; color:#f5f0e1;">
-  جميع الأسعار لا تشمل ضريبة القيمة المضافة 14%
+</div>
+<div id="mojito" class="menu-section">
+
+<h2>موهيتو | Mojito</h2>
+
+<ul>
+
+<li><span>موهيتو كلاسيك<small>Classic Mojito</small></span><span class="price">80</span></li>
+<li><span>موهيتو فلفر<small>Flavor Mojito</small></span><span class="price">85</span></li>
+<li><span>موهيتو ريد بول<small>Red Bull Mojito</small></span><span class="price">105</span></li>
+<li><span>صن شاين<small>Sun Shine</small></span><span class="price">90</span></li>
+<li><span>صن شاين رايز<small>Sun Shine Rise</small></span><span class="price">90</span></li>
+<li><span>موهيتو أموري<small>Amori Mojito</small></span><span class="price">95</span></li>
+<li><span>شيرى كولا<small>Cherry Cola</small></span><span class="price">75</span></li>
+<li><span>هامر هيد<small>Hammer Head</small></span><span class="price">110</span></li>
+<li><span>باور لاجون<small>Power Lagoon</small></span><span class="price">110</span></li>
+<li><span>بلو سكاي<small>Blue Sky</small></span><span class="price">100</span></li>
+
+</ul>
+
+</div>
+<div id="cocktail" class="menu-section">
+
+<h2>كوكتيل | Cocktail</h2>
+
+<ul>
+
+<li><span>كوكتيل بينا كولادا<small>Pina Colada Cocktail</small></span><span class="price">105</span></li>
+<li><span>كوكتيل كوبا كابانا<small>Copa Cabana Cocktail</small></span><span class="price">110</span></li>
+<li><span>كوكتيل فلوريدا<small>Florida Cocktail</small></span><span class="price">95</span></li>
+<li><span>كوكتيل باور كوكتيل<small>Power Cocktail</small></span><span class="price">110</span></li>
+<li><span>كوكتيل بيبي لاف<small>Baby Love Cocktail</small></span><span class="price">95</span></li>
+<li><span>كوكتيل مانجو كيوي<small>Mango Kiwi Cocktail</small></span><span class="price">105</span></li>
+<li><span>كوكتيل أفوكادو مكسرات<small>Avocado Nuts Cocktail</small></span><span class="price">135</span></li>
+<li><span>كوكتيل زبادي عسل<small>Yogurt Honey Cocktail</small></span><span class="price">90</span></li>
+<li><span>كوكتيل زبادي فواكه<small>Yogurt Fruits Cocktail</small></span><span class="price">95</span></li>
+<li><span>كوكتيل زبادي قطع فاكهة أموري<small>Amori Yogurt Fruit Cocktail</small></span><span class="price">105</span></li>
+<li><span>كوكتيل مينت شوكولاتة<small>Mint Chocolate Cocktail</small></span><span class="price">85</span></li>
+<li><span>كوكتيل هابي مانكي<small>Happy Monkey Cocktail</small></span><span class="price">110</span></li>
+<li><span>كوكتيل بوبا<small>Boba Cocktail</small></span><span class="price">105</span></li>
+
+</ul>
+
+</div>
+<div id="fruit" class="menu-section">
+
+<h2>فروت سالاد | Fruit Salad</h2>
+
+<ul>
+
+<li><span>فروت سالاد عادي<small>Fruit Salad</small></span><span class="price">77</span></li>
+<li><span>فروت سالاد آيس<small>Fruit Salad Ice Cream</small></span><span class="price">95</span></li>
+<li><span>باور فروت<small>Power Fruit</small></span><span class="price">80</span></li>
+<li><span>هيلثي فروت<small>Healthy Fruit</small></span><span class="price">85</span></li>
+<li><span>فروت أموري<small>Amori Fruit</small></span><span class="price">99</span></li>
+<li><span>بانانا سبليت<small>Banana Split</small></span><span class="price">80</span></li>
+<li><span>اوريو ماجنس<small>Oreo Magnus</small></span><span class="price">85</span></li>
+<li><span>أم علي<small>Om Ali</small></span><span class="price">79</span></li>
+<li><span>أم علي مكسرات<small>Om Ali Nuts</small></span><span class="price">85</span></li>
+<li><span>طاجن بان كيك<small>Pancake Pan</small></span><span class="price">79</span></li>
+<li><span>طاجن وافل أموري<small>Amori Waffle Pan</small></span><span class="price">90</span></li>
+
+</ul>
+
+</div>
+<div id="milkshake" class="menu-section">
+
+<h2>ميلك شيك | Milkshake</h2>
+
+<ul>
+
+<li><span>ميلك شيك فانيليا<small>Vanilla Milkshake</small></span><span class="price">90</span></li>
+<li><span>ميلك شيك شوكولاتة<small>Chocolate Milkshake</small></span><span class="price">90</span></li>
+<li><span>ميلك شيك كراميل<small>Caramel Milkshake</small></span><span class="price">95</span></li>
+<li><span>ميلك شيك مانجا<small>Mango Milkshake</small></span><span class="price">95</span></li>
+<li><span>ميلك شيك فراولة<small>Strawberry Milkshake</small></span><span class="price">95</span></li>
+<li><span>ميلك شيك بلو بيري<small>Blueberry Milkshake</small></span><span class="price">90</span></li>
+<li><span>ميلك شيك مكس بيري<small>Mix Berry Milkshake</small></span><span class="price">90</span></li>
+<li><span>ميلك شيك بطيخ<small>Watermelon Milkshake</small></span><span class="price">99</span></li>
+<li><span>ميلك شيك موز<small>Banana Milkshake</small></span><span class="price">99</span></li>
+<li><span>ميلك شيك كيوي<small>Kiwi Milkshake</small></span><span class="price">110</span></li>
+<li><span>ميلك شيك اوريو<small>Oreo Milkshake</small></span><span class="price">110</span></li>
+<li><span>ميلك شيك كيتكات<small>KitKat Milkshake</small></span><span class="price">120</span></li>
+<li><span>ميلك شيك سنكيرز<small>Snickers Milkshake</small></span><span class="price">120</span></li>
+
+<li><span>ميلك شيك VIP ريد فلفت<small>Red Velvet VIP Milkshake</small></span><span class="price">135</span></li>
+<li><span>ميلك شيك VIP تشوكلت فادج<small>Chocolate Fudge VIP Milkshake</small></span><span class="price">135</span></li>
+<li><span>ميلك شيك VIP تراميسيو<small>Tiramisu VIP Milkshake</small></span><span class="price">135</span></li>
+<li><span>ميلك شيك VIP مولتن نوتيلا<small>Molten Nutella VIP Milkshake</small></span><span class="price">135</span></li>
+<li><span>ميلك شيك VIP لوتس<small>Lotus VIP Milkshake</small></span><span class="price">135</span></li>
+
+</ul>
+
+</div>
+<div id="smoothie" class="menu-section">
+
+<h2>سموزي | Smoothie</h2>
+
+<ul>
+
+<li><span>سموزي مانجا<small>Mango Smoothie</small></span><span class="price">90</span></li>
+<li><span>سموزي فراولة<small>Strawberry Smoothie</small></span><span class="price">90</span></li>
+<li><span>سموزي ليمون<small>Lemon Smoothie</small></span><span class="price">70</span></li>
+<li><span>سموزي ليمون نعناع<small>Lemon Mint Smoothie</small></span><span class="price">75</span></li>
+<li><span>سموزي برتقال<small>Orange Smoothie</small></span><span class="price">75</span></li>
+<li><span>سموزي بطيخ<small>Watermelon Smoothie</small></span><span class="price">90</span></li>
+<li><span>سموزي كنتلوب<small>Cantaloupe Smoothie</small></span><span class="price">95</span></li>
+<li><span>سموزي كيوي<small>Kiwi Smoothie</small></span><span class="price">99</span></li>
+<li><span>سموزي خوخ<small>Peach Smoothie</small></span><span class="price">85</span></li>
+<li><span>سموزي تفاح<small>Apple Smoothie</small></span><span class="price">85</span></li>
+<li><span>سموزي اناناس<small>Pineapple Smoothie</small></span><span class="price">85</span></li>
+<li><span>سموزي بلوبيري<small>Blueberry Smoothie</small></span><span class="price">75</span></li>
+<li><span>سموزي مكس بيري<small>Mix Berry Smoothie</small></span><span class="price">75</span></li>
+<li><span>سموزي شيري<small>Cherry Smoothie</small></span><span class="price">75</span></li>
+<li><span>سموزي باشون فروت<small>Passion Fruit Smoothie</small></span><span class="price">85</span></li>
+<li><span>سموزي كوكتيل<small>Cocktail Smoothie</small></span><span class="price">90</span></li>
+
+</ul>
+
+</div>
+<div id="iced" class="menu-section">
+
+<h2>آيس كوفي | Iced Coffee</h2>
+
+<ul>
+
+<li><span>آيس لاتيه<small>Iced Latte</small></span><span class="price">75</span></li>
+<li><span>آيس اسبنش لاتيه<small>Iced Spanish Latte</small></span><span class="price">85</span></li>
+<li><span>آيس موكا<small>Iced Mocha</small></span><span class="price">85</span></li>
+<li><span>آيس وايت موكا<small>Iced White Mocha</small></span><span class="price">85</span></li>
+<li><span>آيس كراميل ميكياتو<small>Iced Caramel Macchiato</small></span><span class="price">79</span></li>
+<li><span>آيس كوفي لوتس<small>Iced Lotus Coffee</small></span><span class="price">85</span></li>
+<li><span>آيس بستاشيو كوفي<small>Iced Pistachio Coffee</small></span><span class="price">89</span></li>
+<li><span>آيس ماتشا<small>Iced Matcha</small></span><span class="price">75</span></li>
+<li><span>آيس شوكلت<small>Iced Chocolate</small></span><span class="price">79</span></li>
+<li><span>فرابيه نوتيلا<small>Nutella Frappe</small></span><span class="price">90</span></li>
+<li><span>فرابيه كراميل<small>Caramel Frappe</small></span><span class="price">85</span></li>
+<li><span>فرابنتشينو كلاسيك<small>Classic Frappuccino</small></span><span class="price">90</span></li>
+<li><span>فرابنتشينو شوكلت<small>Chocolate Frappuccino</small></span><span class="price">95</span></li>
+
+</ul>
+
+</div>
+<div id="desserts" class="menu-section">
+
+<h2>ديزرت | Desserts</h2>
+
+<ul>
+
+<li><span>مولتن نوتيلا<small>Molten Nutella</small></span><span class="price">99</span></li>
+<li><span>مولتن لوتس<small>Molten Lotus</small></span><span class="price">99</span></li>
+<li><span>تشيز كيك<small>Cheese Cake</small></span><span class="price">89</span></li>
+<li><span>ريد فلفت<small>Red Velvet</small></span><span class="price">85</span></li>
+<li><span>تشوكلت فادج<small>Chocolate Fudge</small></span><span class="price">89</span></li>
+<li><span>براونيز<small>Brownies</small></span><span class="price">65</span></li>
+<li><span>تراميسو<small>Tiramisu</small></span><span class="price">99</span></li>
+<li><span>هاني كيك<small>Honey Cake</small></span><span class="price">89</span></li>
+<li><span>فولكانو نوتيلا<small>Nutella Volcano</small></span><span class="price">85</span></li>
+<li><span>طاجن نوتيلا<small>Nutella Pan</small></span><span class="price">85</span></li>
+<li><span>طاجن اوريو<small>Oreo Pan</small></span><span class="price">85</span></li>
+<li><span>طاجن نوتيلا وايت<small>White Nutella Pan</small></span><span class="price">85</span></li>
+<li><span>وافل شوكولاتة كراميل<small>Chocolate Caramel Waffle</small></span><span class="price">80</span></li>
+<li><span>وافل نوتيلا لوتس<small>Nutella Lotus Waffle</small></span><span class="price">90</span></li>
+<li><span>وافل نوتيلا وايت فواكه<small>White Nutella Fruits Waffle</small></span><span class="price">100</span></li>
+<li><span>قشطوطة مانجو<small>Mango Qeshtota</small></span><span class="price">85</span></li>
+<li><span>قشطوطة خوخ<small>Peach Qeshtota</small></span><span class="price">85</span></li>
+<li><span>قشطوطة اناناس<small>Pineapple Qeshtota</small></span><span class="price">85</span></li>
+<li><span>قشطوطة فواكه<small>Fruits Qeshtota</small></span><span class="price">89</span></li>
+
+</ul>
+
+</div>
+<div id="shisha" class="menu-section">
+
+<h2>شيشة | Shisha</h2>
+
+<ul>
+
+<li><span>شيشة قص<small>Shisha Plain</small></span><span class="price">25</span></li>
+<li><span>شيشة فواكه<small>Fruit Shisha</small></span><span class="price">95</span></li>
+<li><span>شيشة سلوم<small>Saloum Shisha</small></span><span class="price">25</span></li>
+<li><span>لي طبي<small>Medical Mouthpiece</small></span><span class="price">15</span></li>
+
+</ul>
+
+</div>
+<script>
+
+function showSection(id){
+
+const sections=document.querySelectorAll('.menu-section')
+
+sections.forEach(section=>section.classList.remove('active'))
+
+document.getElementById(id).classList.add('active')
+
+}
+
+</script>
+
+<p style="text-align:center;margin-top:40px">
+
+جميع الأسعار لا تشمل ضريبة القيمة المضافة 14%
+
 </p>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
